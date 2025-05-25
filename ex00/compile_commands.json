@@ -1,0 +1,38 @@
+[
+ {
+  "directory": "/home/doge/CPP05/ex00",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-gdwarf-4",
+   "-c",
+   "srcs/main.cpp",
+   "-o",
+   "objs/main.o"
+  ],
+  "file": "srcs/main.cpp"
+ },
+ {
+  "directory": "/home/doge/CPP05/ex00",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-gdwarf-4",
+   "-c",
+   "srcs/Bureaucrat.cpp",
+   "-o",
+   "objs/Bureaucrat.o"
+  ],
+  "file": "srcs/Bureaucrat.cpp"
+ }
+]
