@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <iostream>
 #include <ostream>
 
@@ -62,6 +63,11 @@ Bureaucrat::Bureaucrat(std::string name, size_t grade):_name(name),_grade(grade)
     throw Bureaucrat::GradeTooLowException();
     _grade = 150;
   }
+}
+
+void Bureaucrat::SignForm(Form &form)
+{
+  form.beSigned(this);
 }
 
 /* Bureaucrat grade too high exception */
