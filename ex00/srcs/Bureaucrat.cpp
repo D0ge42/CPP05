@@ -8,16 +8,9 @@
 
 void Bureaucrat::decreaseGrade()
 {
-  try
-  {
     this->_grade++;
     if (this->_grade > 150)
       throw Bureaucrat::GradeTooLowException();
-  }
-  catch (Bureaucrat::GradeTooLowException &e)
-  {
-    std::cout << e.what() << std::endl;
-  }
 }
 
 /* Function to increase grade.
@@ -26,16 +19,9 @@ void Bureaucrat::decreaseGrade()
 
 void Bureaucrat::increaseGrade()
 {
-  try
-  {
     this->_grade--;
     if (this->_grade < 1)
       throw Bureaucrat::GradeTooHighException();
-  }
-  catch (Bureaucrat::GradeTooHighException &e)
-  {
-    std::cout << e.what() << std::endl;
-  }
 }
 
 /* << Operator overload */

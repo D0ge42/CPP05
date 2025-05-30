@@ -8,7 +8,6 @@ OBJ_DIR = objs
 
 SRC = srcs/main.cpp \
 			srcs/Bureaucrat.cpp \
-			srcs/Exception.cpp
 
 OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 

@@ -6,7 +6,7 @@
 #include <ostream>
 #include <string>
 
-class Form
+class AForm
 {
   private:
     const std::string _name;
@@ -15,12 +15,12 @@ class Form
     const size_t _execGrade;
 
   public:
-    Form(void);
-    Form(std::string name, size_t signGrade, size_t execGrade);
-    Form(const Form &other);
-    ~Form(void);
+    AForm(void);
+    AForm(std::string name, size_t signGrade, size_t execGrade);
+    AForm(const AForm &other);
+    ~AForm(void);
 
-    Form &operator=(const Form &other);
+    AForm &operator=(const AForm &other);
 
     class GradeTooHighException: public std::exception
     {
@@ -39,8 +39,9 @@ class Form
     size_t getExecGrade() const;
     bool getSigned() const;
     void beSigned(Bureaucrat *bur);
+    virtual void execute(Bureaucrat const &executor)const = 0;
 };
 
-std::ostream &operator<<(std::ostream &stream, Form &form);
+std::ostream &operator<<(std::ostream &stream, AForm &form);
 
 #endif

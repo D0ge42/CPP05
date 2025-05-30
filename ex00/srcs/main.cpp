@@ -39,13 +39,27 @@ int main()
 
   std::cout << "\n\033[1;92m -- Decrease Grade past limit \033[0m" << std::endl;
 
-  test3.decreaseGrade();
+  try
+  {
+    test3.decreaseGrade();
+  }
+  catch (Bureaucrat::GradeTooLowException &e)
+  {
+    std::cout << e.what() << std::endl;
+  }
 
   //###################################################################################//
 
   std::cout << "\n\033[1;92m -- Increase grade past limit \033[0m" << std::endl;
 
-  test4.increaseGrade();
+  try
+  {
+    test4.increaseGrade();
+  }
+  catch (Bureaucrat::GradeTooHighException &e)
+  {
+    std::cout << e.what() << std::endl;
+  }
 
   //###################################################################################//
 
