@@ -1,6 +1,16 @@
 #ifndef FORM_HPP
 #define FORM_HPP
 
+#define BLACK "\e[1;90m"
+#define RED "\e[1;91m"
+#define GREEN "\e[1;92m"
+#define YELLOW "\e[1;93m"
+#define BLUE "\e[1;94m"
+#define MAGENTA "\e[1;95m"
+#define CYAN "\e[1;96m"
+#define WHITE "\e[1;97m"
+#define RESET "\e[0m"
+
 #include "Bureaucrat.hpp"
 #include <exception>
 #include <ostream>
@@ -29,6 +39,11 @@ class AForm
 
     };
     class GradeTooLowException: public std::exception
+    {
+      public:
+        const char* what() const throw();
+    };
+    class FormNotSignedException: public std::exception
     {
       public:
         const char* what() const throw();

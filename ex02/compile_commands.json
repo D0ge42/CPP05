@@ -1,44 +1,110 @@
 [
  {
-  "directory": "/nfs/homes/lonulli/CPP05/ex01",
-  "file": "srcs/main.cpp",
+  "directory": "/home/doge/CPP05/ex02",
   "arguments": [
-   "c++",
+   "g++",
    "-Wall",
    "-Wextra",
    "-Werror",
    "-std=c++98",
    "-Iincludes",
+   "-g",
+   "-gdwarf-4",
    "-c",
-   "srcs/main.cpp"
-  ]
+   "srcs/main.cpp",
+   "-o",
+   "objs/main.o"
+  ],
+  "file": "srcs/main.cpp"
  },
  {
-  "directory": "/nfs/homes/lonulli/CPP05/ex01",
-  "file": "srcs/Bureaucrat.cpp",
+  "directory": "/home/doge/CPP05/ex02",
   "arguments": [
-   "c++",
+   "g++",
    "-Wall",
    "-Wextra",
    "-Werror",
    "-std=c++98",
    "-Iincludes",
+   "-g",
+   "-gdwarf-4",
    "-c",
-   "srcs/Bureaucrat.cpp"
-  ]
+   "srcs/Bureaucrat.cpp",
+   "-o",
+   "objs/Bureaucrat.o"
+  ],
+  "file": "srcs/Bureaucrat.cpp"
  },
  {
-  "directory": "/nfs/homes/lonulli/CPP05/ex01",
-  "file": "srcs/Form.cpp",
+  "directory": "/home/doge/CPP05/ex02",
   "arguments": [
-   "c++",
+   "g++",
    "-Wall",
    "-Wextra",
    "-Werror",
    "-std=c++98",
    "-Iincludes",
+   "-g",
+   "-gdwarf-4",
    "-c",
-   "srcs/Form.cpp"
-  ]
+   "srcs/AForm.cpp",
+   "-o",
+   "objs/AForm.o"
+  ],
+  "file": "srcs/AForm.cpp"
+ },
+ {
+  "directory": "/home/doge/CPP05/ex02",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-gdwarf-4",
+   "-c",
+   "srcs/RobotomyRequestForm.cpp",
+   "-o",
+   "objs/RobotomyRequestForm.o"
+  ],
+  "file": "srcs/RobotomyRequestForm.cpp"
+ },
+ {
+  "directory": "/home/doge/CPP05/ex02",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-gdwarf-4",
+   "-c",
+   "srcs/ShrubberryCreationForm.cpp",
+   "-o",
+   "objs/ShrubberryCreationForm.o"
+  ],
+  "file": "srcs/ShrubberryCreationForm.cpp"
+ },
+ {
+  "directory": "/home/doge/CPP05/ex02",
+  "arguments": [
+   "g++",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-std=c++98",
+   "-Iincludes",
+   "-g",
+   "-gdwarf-4",
+   "-c",
+   "srcs/PresidentialPardonForm.cpp",
+   "-o",
+   "objs/PresidentialPardonForm.o"
+  ],
+  "file": "srcs/PresidentialPardonForm.cpp"
  }
 ]

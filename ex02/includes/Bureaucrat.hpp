@@ -5,7 +5,7 @@
 #include <ostream>
 #include <string>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -33,7 +33,8 @@ class Bureaucrat
     size_t getGrade() const;
     void increaseGrade() ;
     void decreaseGrade() ;
-    void SignForm(Form &form);
+    void signForm(AForm &form);
+    void executeForm(AForm const& form);
 };
 
 std::ostream &operator<<(std::ostream &stream, Bureaucrat &bur);
