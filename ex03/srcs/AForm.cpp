@@ -7,9 +7,9 @@ AForm::AForm(void):_name("EL FORMO"),_isSigned(false),_signGrade(0x101010),_exec
 {
 }
 
-
 AForm::AForm(std::string name, size_t signGrade, size_t execGrade):_name(name),_isSigned(false),_signGrade(signGrade),_execGrade(execGrade)
 {
+
   if (this->_signGrade > 150 || this->_execGrade > 150)
   {
         throw GradeTooLowException();
@@ -41,10 +41,15 @@ AForm &AForm::operator=(const AForm &other)
 
 std::ostream &operator<<(std::ostream &os, AForm &form)
 {
-  os << form.getName() << ", form grade: " << form.getSignGrade() << " exec grade: " << form.getExecGrade() << std::endl;
+  os << form.getName() << ", form grade: " << form.getSignGrade() << " exec grade: " <<  form.getExecGrade() << std::endl;
   return os;
 }
 /* Bureaucrat grade too high exception */
+
+const char *AForm::FormDoesNotExistException::what() const throw()
+{
+  return "FormDoesNotExistException: form with this name does not exist";
+}
 
 const char *AForm::GradeTooHighException::what() const throw()
 {

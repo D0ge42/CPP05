@@ -99,6 +99,17 @@ int main()
     }
   }
 
+  std::cout << BLUE << "\n-- Test: overload << operator 📣\n" << RESET << std::endl;
+  {
+    RobotomyRequestForm form1;
+    PresidentialPardonForm form2;
+    ShrubberryCreationForm form3;
+
+    std::cout << form1 << std::endl;
+    std::cout << form2 << std::endl;
+    std::cout << form3 << std::endl;
+  }
+
   std::cout << BLUE << "\n-- Test: Shrubberry copy assignment operator ⚙️\n" << RESET << std::endl;
   {
     ShrubberryCreationForm *form = new ShrubberryCreationForm("ShrubberyOrig");
