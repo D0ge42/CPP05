@@ -68,3 +68,7 @@ void ShrubberryCreationForm::execute(const Bureaucrat &bur) const
   file.close();
 }
 
+std::string ShrubberryCreationForm::getTarget()const
+{
+  return this->_target;
+}

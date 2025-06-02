@@ -32,7 +32,8 @@ AForm::~AForm(void)
 
 AForm &AForm::operator=(const AForm &other)
 {
-  (void)other;
+  std::cout << "AForm copy assignment operator called" << std::endl;
+  this->_target = other._target;
   return (*this);
 }
 
@@ -48,7 +49,7 @@ std::ostream &operator<<(std::ostream &os, AForm &form)
 
 const char *AForm::GradeTooHighException::what() const throw()
 {
-  return "GradeTooHighException: grade cannot be higher than 1";
+  return "GradeTooHighException: grade too high";
 }
 
 const char *AForm::FormNotSignedException::what() const throw()
@@ -60,7 +61,7 @@ const char *AForm::FormNotSignedException::what() const throw()
 
 const char *AForm::GradeTooLowException::what() const throw()
 {
-  return "GradeTooLowException: grade cannot be lower than 150";
+  return "GradeTooLowException: grade too low.";
 }
 
 /* Getters */
@@ -88,6 +89,11 @@ void AForm::beSigned(Bureaucrat *bur)
     }
     else
       throw GradeTooLowException();
+}
+
+std::string AForm::getTarget() const
+{
+  return this->_target;
 }
 
 bool AForm::getSigned() const

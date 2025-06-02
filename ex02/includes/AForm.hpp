@@ -20,15 +20,16 @@ class AForm
 {
   private:
     const std::string _name;
+    std::string _target;
     bool _isSigned;
     const size_t _signGrade;
     const size_t _execGrade;
 
   public:
     AForm(void);
-    AForm(std::string name, size_t signGrade, size_t execGrade);
+    AForm(std::string name,  size_t signGrade, size_t execGrade);
     AForm(const AForm &other);
-    ~AForm(void);
+    virtual ~AForm(void);
 
     AForm &operator=(const AForm &other);
 
@@ -55,6 +56,7 @@ class AForm
     bool getSigned() const;
     void beSigned(Bureaucrat *bur);
     virtual void execute(Bureaucrat const &executor)const = 0;
+    virtual std::string getTarget() const;
 };
 
 std::ostream &operator<<(std::ostream &stream, AForm &form);

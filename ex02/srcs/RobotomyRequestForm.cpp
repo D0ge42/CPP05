@@ -51,3 +51,7 @@ void RobotomyRequestForm::execute(const Bureaucrat &bur) const
     std::cout << WHITE << this->_target + RESET << " robotomization failed ❌ " << (char)0xa;
 }
 
+std::string RobotomyRequestForm::getTarget()const
+{
+  return this->_target;
+}

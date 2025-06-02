@@ -15,6 +15,7 @@ class ShrubberryCreationForm: public AForm
 
     ShrubberryCreationForm &operator=(const ShrubberryCreationForm &other);
     void execute(Bureaucrat const &executor) const ;
+    std::string getTarget()const;
 };
 
 #endif
