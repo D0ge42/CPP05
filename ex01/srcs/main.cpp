@@ -8,9 +8,9 @@ int main()
   Form a("Formoso",42,43);
   {
     Form b = a;
-    std::cout << b.getName() << std::endl;
-    std::cout << b.getSignGrade() << std::endl;
-    std::cout << b.getExecGrade() << std::endl;
+    std::cout << "Name: " << b.getName() << std::endl;
+    std::cout <<  "Sign grade: " << b.getSignGrade() << std::endl;
+    std::cout << "Exec grade: " << b.getExecGrade() << std::endl;
   }
 
   /*##############################################################################*/

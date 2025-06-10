@@ -63,7 +63,7 @@ int main()
 
   //###################################################################################//
 
-  std::cout << "\n\033[1;94m -- << Copy assignement test \033[0m" << std::endl;
+  std::cout << "\n\033[1;94m -- << Copy assignment test \033[0m" << std::endl;
 
   Bureaucrat test6("John.Jr",30);
 
